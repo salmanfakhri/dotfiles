@@ -1,7 +1,17 @@
-set tabstop=4
+set tabstop=4 softtabstop=4
+set shiftwidth
+set expandtab
+set smartindent
 
-:set number relativenumber
-:set nu rnu
+" Colors
+highlight LineNr ctermfg=DarkGrey " line numbers
+highlight Normal ctermfg=grey ctermbg=234 " backgroud color
+
+" set nohlsearch
+set incsearch 
+
+set number relativenumber
+set nu rnu
 
 " Turns on relative number in normal mode and absolute number in insert mode
 :augroup numbertoggle
@@ -10,13 +20,16 @@ set tabstop=4
 :  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 :augroup END
 
-:set ruler
+set ruler
 
-:set ignorecase
+set nowrap           " do not automatically wrap on load
+set formatoptions-=t " do not automatically wrap text when typing
 
-:set smartcase
+set ignorecase
 
-:set showmatch
+set smartcase
+
+set showmatch
 
 " Turn on the Wild menu
 set wildmenu
