@@ -1,3 +1,7 @@
+" Turn off sounds
+set visualbell
+set t_vb=
+
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
